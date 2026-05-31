@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Milo Local</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Local workspace</p>
+        <h1>Milo</h1>
+      </div>
+      <div class="status-cluster">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span id="connection-status">Ready</span>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <section class="file-panel" aria-label="Files">
+        <header class="panel-header">
+          <div>
+            <h2>Files</h2>
+            <p>Local exchange</p>
+          </div>
+          <button id="refresh-files" class="secondary-button" type="button">Refresh</button>
+        </header>
+
+        <div id="upload-box" class="upload-box">
+          <input id="file-input" type="file" multiple>
+          <div class="upload-mark" aria-hidden="true">+</div>
+          <div>
+            <h3>Add files</h3>
+            <p>Text, data, notes, drafts</p>
+          </div>
+          <button id="choose-files" type="button">Choose Files</button>
+          <span id="upload-status" role="status"></span>
+        </div>
+
+        <div class="file-section">
+          <div class="section-title">
+            <h3>For Milo</h3>
+            <span id="upload-count">0</span>
+          </div>
+          <div id="upload-list" class="file-list empty">No files uploaded.</div>
+        </div>
+
+        <div class="file-section">
+          <div class="section-title">
+            <h3>From Milo</h3>
+            <span id="output-count">0</span>
+          </div>
+          <div id="output-list" class="file-list empty">No Milo files yet.</div>
+        </div>
+      </section>
+
+      <section class="chat-panel" aria-label="Milo output">
+        <header class="chat-header">
+          <div>
+            <p class="eyebrow">Conversation</p>
+            <h2>Milo Output</h2>
+          </div>
+          <button id="clear-output" class="secondary-button" type="button">Clear</button>
+        </header>
+
+        <div id="messages" class="messages" aria-live="polite">
+          <article class="message assistant">
+            <div class="message-role">Milo</div>
+            <div class="message-body">Ready for your next request.</div>
+          </article>
+        </div>
+
+        <form id="query-form" class="composer">
+          <div class="composer-header">
+            <label for="query-input">Query</label>
+            <span><span id="selected-count">0 files selected</span> · Shift+Enter for newline</span>
+          </div>
+          <div class="composer-row">
+            <textarea id="query-input" rows="3" placeholder="Type your query..." required></textarea>
+            <button id="send-query" type="submit">Send</button>
+          </div>
+          <div id="send-status" class="send-status" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+    </main>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
