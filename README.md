@@ -186,12 +186,3 @@ Current tests validate that retrieved conversation and durable user memories are
 ├── tests/                               # Unit tests
 └── requirements.txt                     # Python dependencies
 ```
-
-## Resume-Relevant Implementation Details
-
-- Designed an agent-scoped memory model that separates raw conversation recall from durable user preferences and facts.
-- Implemented semantic retrieval with OpenAI embeddings and pgvector HNSW cosine indexes.
-- Added local file ingestion that safely excerpts text files and omits binary content from prompts.
-- Integrated Supabase Auth while preserving a low-friction local development mode.
-- Built a minimal frontend without a framework, keeping the app easy to run and inspect.
-- Added database provisioning and migration logic for repeatable Supabase setup.
