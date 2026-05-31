@@ -1,6 +1,6 @@
-# Friend
+# Milo
 
-Friend is a local AI assistant workspace built around "Milo," a FastAPI-powered chatbot with a browser UI, file-aware prompts, optional Supabase authentication, and pgvector-backed long-term memory. The project demonstrates a practical assistant architecture that combines OpenAI's Responses API, retrieval-augmented conversation memory, local file handling, and a lightweight frontend.
+Milo is a local AI assistant workspace built around a FastAPI-powered chatbot with a browser UI, file-aware prompts, optional Supabase authentication, and pgvector-backed long-term memory. The project demonstrates a practical assistant architecture that combines OpenAI's Responses API, retrieval-augmented conversation memory, local file handling, and a lightweight frontend.
 
 ## Highlights
 
