@@ -59,7 +59,7 @@ Create a `.env` file in the project root:
 
 ```dotenv
 OPENAI_API_KEY=your_openai_api_key
-OPENAI_MODEL=gpt-4.1-mini
+OPENAI_MODEL=gpt-5.5
 DEV_AUTH_DISABLED=true
 
 # Optional: Supabase/Postgres memory
@@ -144,7 +144,7 @@ Set `CLI_INPUT_MODE=voice` to record microphone input and transcribe it before s
 | Variable | Default | Description |
 | --- | --- | --- |
 | `OPENAI_API_KEY` | Required | API key used for chat, embeddings, and transcription. |
-| `OPENAI_MODEL` | `gpt-4.1-mini` | Model used for assistant responses. |
+| `OPENAI_MODEL` | `gpt-5.5` | Model used for assistant responses. |
 | `SYSTEM_PROMPT` | Built in | Overrides Milo's default assistant instructions. |
 | `WEB_SEARCH_ENABLED` | `true` | Enables OpenAI web search tools. |
 | `WEB_SEARCH_CONTEXT_SIZE` | `medium` | Search context size: `low`, `medium`, or `high`. |
